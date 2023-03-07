@@ -1,0 +1,28 @@
+@baseUrl = http://127.0.0.1:5000
+
+###
+# создать объявление
+POST {{baseUrl}}/ad/
+Content-Type: application/json
+
+{
+  "header": "Куплю книгу",
+  "description": "Куплю 11-й том 1-го собрания сочинений В.И.Ленина",
+  "owner": "User_3"
+}
+
+###
+# просмотреть *все* объявления
+GET {{baseUrl}}/ad/
+content-type: application/json
+
+###
+# просмотреть *одно* объявления
+GET {{baseUrl}}/ad/1
+content-type: application/json
+
+###
+# удалить объявление
+DELETE {{baseUrl}}/ad/3
+content-type: application/json
+###
